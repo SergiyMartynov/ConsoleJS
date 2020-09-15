@@ -1,21 +1,43 @@
-const str = "test";
-const arr = [1, 2, 4];
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function () {
+        console.log("Test");
+    }
+};
 
-//console.log(str[2] = 'd');
+options.makeTest();
 
-console.log(str.toUpperCase());
-console.log(str);
+const {
+    border,
+    bg
+} = options.colors;
+console.log(border);
+console.log(bg);
 
-const fruit = "Some fruit";
-console.log(fruit.indexOf("fruit"));
 
-const logg = "Hello world";
-//console.log(logg.slic(6, 10));
-console.log(logg.substring(-26, 11));
 
-const num = 12.2;
-console.log(Math.round(num));
+//console.log(options["colors"]["bg"]);
+// console.log(options.name);
+// delete options.name;
+// console.log(options);
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Proporties ${i} has value ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Properties ${key} has the meaning ${options[key]}`);
+//         counter++;
+//     }
+// }
+// console.log(counter);
 
-const test = "12.2px";
-//console.log(parseInt(test));
-console.log(parseFloat(test));
+console.log(Object.keys(options).length);
